@@ -57,7 +57,7 @@ class TimerHaxe extends EventEmitter
 	public function stop():TimerHaxe
 	{
 		active = false;
-		this.emit(STOP, _elapsedTime);
+		emit(STOP, _elapsedTime);
 		return this;
 	}
 	
@@ -89,7 +89,7 @@ class TimerHaxe extends EventEmitter
 		
 		if(time > _elapsedTime)
 		{
-			var t = _elapsedTime + deltaMS;
+			var t:Float = _elapsedTime + deltaMS;
 			var ended:Bool = (t >= time);
 			
 			_elapsedTime = ended ? time : t;

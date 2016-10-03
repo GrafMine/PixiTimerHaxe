@@ -18,7 +18,7 @@ class Main
 	
 	private function useSample():Void
 	{
-		var timer  = TimerManagerHaxe.createTimer(1);
+		var timer:TimerHaxe = TimerManagerHaxe.createTimer(1);
 		timer.loop = true;
 		timer.on(TimerHaxe.REPEAT, onRepeat);
 		timer.start();
